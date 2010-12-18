@@ -1,0 +1,7 @@
+/*C3*/SET SCHEMA PUBLIC
+INSERT INTO CODESHARE VALUES(2,'','main()','','')
+COMMIT
+INSERT INTO CODESHARE VALUES(3,'gdgfdgfdg','','','')
+COMMIT
+INSERT INTO CODESHARE VALUES(4,'main()','java','meu primeiro trecho','main test')
+COMMIT
