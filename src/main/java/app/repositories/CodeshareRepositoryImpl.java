@@ -18,7 +18,7 @@ public class CodeshareRepositoryImpl
 
 	@SuppressWarnings("unchecked")
        @Override
-       public List<Codeshare> findbyTag(String tag) {
+       public List<Codeshare> findTag(String tag) {
                String t = "%"+ tag + "%";
                Query q = entityManager.createQuery("From Codeshare " + "where tags like :tag" );
                q.setParameter("tag", t);  

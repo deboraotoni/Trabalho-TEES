@@ -66,7 +66,7 @@ ${codeshare.codigo}
 
 <!--BUSCA-->
 <td align="top">
-<form action="<c:url value="/codeshares/search"/>" method="post">
+<form action="<c:url value="/codeshares/buscar"/>" method="post">
  <div class="field" >
     <input type="text" name="tag" />
  </div>

@@ -97,9 +97,9 @@ public class CodeshareController {
 
 
 	@Post
-	@Path("/codeshares/search")
-	public void searchByTag(String tag) {	
-			result.redirectTo(this).index(null,repository.findbyTag(tag));
+	@Path("/codeshares/buscar")
+	public void busca(String tag) {	
+			result.redirectTo(this).index(null,repository.findTag(tag));
 	}
 	
 }

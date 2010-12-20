@@ -73,7 +73,7 @@ public class CodeshareController {
 	
 	@Get
 	@Path("/codeshares/{codeshare.id}/edit")
-	public Codeshare edit(Codeshare codeshare) {
+	public void edit(Codeshare codeshare) {
 		this.result.use(Results.logic()).redirectTo(CodeshareController.class).index(repository.find(codeshare.getId()),null);
 		
 	}
@@ -97,9 +97,9 @@ public class CodeshareController {
 
 
 	@Post
-	@Path("/codeshares/search")
-	public void searchByTag(String tag) {	
-			result.redirectTo(this).index(null,repository.findbyTag(tag));
+	@Path("/codeshares/busca")
+	public void busca(String tag) {	
+			result.redirectTo(this).index(null,repository.findTag(tag));
 	}
 	
 }

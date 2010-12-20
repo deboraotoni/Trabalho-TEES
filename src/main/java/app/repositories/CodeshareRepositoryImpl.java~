@@ -1,9 +1,11 @@
 package app.repositories;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 
 import br.com.caelum.vraptor.ioc.Component;
 import app.models.Codeshare;
+import javax.persistence.Query;
 
 @Component
 public class CodeshareRepositoryImpl 

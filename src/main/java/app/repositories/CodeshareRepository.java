@@ -19,5 +19,5 @@ public interface CodeshareRepository {
 	
 	List<Codeshare> findAll();
 
-	List<Codeshare> findbyTag(String tag);
+	List<Codeshare> findTag(String tag);
 }
