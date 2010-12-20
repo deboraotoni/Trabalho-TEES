@@ -73,7 +73,7 @@ public class CodeshareController {
 	
 	@Get
 	@Path("/codeshares/{codeshare.id}/edit")
-	public void edit(Codeshare codeshare) {
+	public Codeshare edit(Codeshare codeshare) {
 		this.result.use(Results.logic()).redirectTo(CodeshareController.class).index(repository.find(codeshare.getId()),null);
 		
 	}

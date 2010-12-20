@@ -1,0 +1,19 @@
+package app.controllers;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
+public class CodeshareControllerTest {
+
+	@Test public void nomeNotEmpty() {
+		assertNotNull("put something real.", new Codeshare(codeshare));
+ 	}
+	
+	
+	public  codeshare (String nome, String tags, String linguagem, String codigo){
+		
+	}
+}
+
+

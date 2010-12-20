@@ -1,7 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<link href="prettify.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="prettify.js"></script>
 
 <c:if test="${not empty errors}">
 	<c:forEach items="${errors}" var="error">
@@ -16,35 +14,42 @@
     <input type="hidden" name="_method" value="put"/>
   </c:if>
 
+
+<table cellpadding="40">
+<tr>
+<td>
   <div class="field">
-    Nome:<br />
+    Nome: &nbsp  &nbsp &nbsp &nbsp &nbsp
     <input type="text" name="codeshare.nome" value="${codeshare.nome}"/>
   </div>
-  <div class="field">
-    Codigo:<br />
-    <input type="text" name="codeshare.codigo" value="${codeshare.codigo}"/>
-  </div>
-  <div class="field">
-    Tags:<br />
+ <div class="field"> 
+    Tags: &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp
     <input type="text" name="codeshare.tags" value="${codeshare.tags}"/>
   </div>
 
-
-
-
-  <div class="field" onload="prettyPrint()">
-<pre class="prettyprint">
-    Linguagem:<br />
-    <input type="text" name="codeshare.linguagem" value="${codeshare.linguagem}"/>
-</pre>
+ <div class="field">
+    Linguagem: &nbsp  &nbsp
+    <select name="codeshare.linguagem" value="${codeshare.linguagem}" >
+    <option> Java
+    <option> Ruby
+    <option> PHP
+    <option> JavaScript
+    </select>
   </div>
 
+  <div class="field">
+    Codigo:<br />
+<textarea rows="5" cols="40" id="myCpWindow" class="codepress  linenumbers-on">
+</textarea>
+
+</div>
 
 
   <div class="actions">
-    <button type="submit">send</button>
+    <button type="submit">Salvar</button>
   </div>
 </form>
-
-<a href="<c:url value="/codeshares"/>">Back</a>
+</td>
+</table>
+<a href="<c:url value="/codeshares"/>">Voltar</a>
 
